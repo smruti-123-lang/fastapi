@@ -5,7 +5,7 @@ This project provides a FastAPI-based Machine Learning service to predict crop y
 It is containerized with Docker + Nginx + Ngrok, so you can run it locally and get a public link instantly (useful for hackathons & demos).
 
 📂 Project Structure
-`
+```
 ml_service/
 │
 ├── app/
@@ -20,7 +20,7 @@ ml_service/
 ├── docker-compose.yml       # FastAPI + Nginx + Ngrok
 ├── start.sh                 # One command startup
 └── README.md                # Project documentation
-`
+```
 ⚡ Features
 
 🌱 Crop Yield Prediction API built with FastAPI
@@ -32,15 +32,15 @@ ml_service/
 
 🛠️ Setup Instructions
 1️⃣ Clone the repo
-`
+```
 git clone https://github.com/<your-username>/<your-repo>.git
 cd ml_service
-`
+```
 2️⃣ Start services with Docker
-`
+```
 chmod +x start.sh
 ./start.sh
-`
+```
 3️⃣ Get your public API URL
 
 The script will print something like:
@@ -49,22 +49,22 @@ Your public FastAPI URL:
 https://abcd1234.ngrok.io
 
 📌 API Endpoints
-`
+```
 1. Root
 GET /
-`
+```
 ✅ Returns API status.
 
 Response
-`
+```
 { "message": "Hello from FastAPI + Docker + Ngrok!" }
-`
+```
 2. Predict Crop Yield
-`
+```
 POST /predict
-`
+```
 Sample Request
-`
+```
 {
   "Crop": "Rice",
   "Crop_Year": 2022,
@@ -75,14 +75,14 @@ Sample Request
   "Fertilizer": 250,
   "Pesticide": 50
 }
-`
+```
 
 Sample Response
-`
+```
 {
   "predicted_yield": 2800.5
 }
-`
+```
 💻 Tech Stack
 
 FastAPI – Backend API
